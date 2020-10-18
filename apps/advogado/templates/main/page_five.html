@@ -1,0 +1,174 @@
+{% extends "base.html" %} {% load static%} {% block main %}
+
+<h3 class="h3">Peticionamento Eletrônico (5 de 5) - Documentos</h3>
+<div class="container-fluid">
+    <p class="p_border">Informações do Processo >> Assuntos >> Partes Autoras >> Partes Réus >> <span class="bolder"><b></b>Documentos</b></span>
+    </p>
+</div>
+
+<div class="container-fluid container-grid">
+    <p class="title_over">Informações Preliminares</p>
+    <div class="">
+        <!-- corrigir esses campos -->
+        <div class="d-flex justify-content-between">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="opcao1">
+                <label class="form-check-label" for="inlineCheckbox1">Requer Prioridade de Tramitação - Doença
+                            Grave</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="opcao2">
+                <label class="form-check-label" for="inlineCheckbox2">Requer Liminar Autenticação de
+                            Tutela</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="opcao3">
+                <label class="form-check-label" for="inlineCheckbox3">Intervenção do Ministério Público</label>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="opcao1">
+                <label class="form-check-label" for="inlineCheckbox1">Requer Prioridade de Tramitação -
+                            Idoso</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="opcao2">
+                <label class="form-check-label" for="inlineCheckbox2">Requer Prioridade de Tramitação - Pessoa
+                            com Deficiência</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="opcao3">
+                <label class="form-check-label" for="inlineCheckbox3">Requer Prioridade de Tramitação Criancça e
+                            Adolescente</label>
+            </div>
+        </div>
+    </div>
+    <!-- fim do d-flex -->
+</div>
+<div class="container-fluid container-grid mt-3 pt-1 pb-3">
+    <p class="title_over">Conciliação</p>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="opcao3">
+        <label class="form-check-label" for="inlineCheckbox3">Mandamento que NÃO tenho interesse em concluir
+                    (art.334, §5º CPC)</label>
+    </div>
+</div>
+<div class="container-fluid container-grid mt-3 pt-2">
+    <div class="text-center">
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <a href=""> Adicionar Mais Documentos</a>
+            </li>
+            <li class="list-inline-item">|</li>
+            <li class="list-inline-item">
+                <a href="">Digitar Documento</a>
+            </li>
+            <li class="list-inline-item">|</li>
+            <li class="list-inline-item">
+                <a href="">Opções Avançadas</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container-grid_inside">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p class="title_over">[ Documentos ]</p>
+            <div class="row">
+                <div class="col">
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="">Tipo do Documento</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input doc_option" type="radio" name="doc_option" id="pdf_option" value="pdf">
+                        <label class="form-check-label" for="pdf_option">PDF</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input doc_option" id="txt_option" type="radio" name="doc_option" id="txt_option" value="txt">
+                        <label class="form-check-label" for="txt_option">TXT</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-inline mt-2">
+                <div class="form-group mb-2">
+                    <label for="staticEmail2" class="">Enviar Arquivo:</label>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                    <input id="send_file" name="myfile" data-toggle="modal" type="file" class="form-control-sm">
+                    <!-- Modal de confirmação -->
+                    <div class="modal" tabindex="-1 " role="dialog" id="pdf_option_modal">
+                        <div class="modal-dialog " role="document ">
+                            <div class="modal-content ">
+                                <div class="modal-header ">
+                                    <h5 class="modal-title ">Tipo de Arquivo : PDF</h5>
+                                    <button type="button " class="close " data-dismiss="modal " aria-label="Fechar ">
+                                            <span aria-hidden="true ">&times;</span>
+                                        </button>
+                                </div>
+                                <div class="modal-body ">
+                                    <p>Arquivos de extensão PDF podem levar mais tempo para obter resultado.
+                                    </p>
+                                </div>
+                                <div class="modal-footer ">
+                                    <button type="button " class="btn btn-secondary " data-dismiss="modal ">Fechar</button>
+                                    <button type="button" class="btn btn-primary" onclick="NewInput()">Continuar assim mesmo</button>
+                                    <!-- <label id="label_selecao_arquivo" for='selecao-arquivo' class="form-control-file">Continuar mesmo assim &#187;</label>
+                                    <input id="selecao-arquivo" type="file" class="form-control-file"> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-danger button_submit_pdf">Enviar Pdf</button>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+    <button type="submit" class="btn btn-sm btn-secondary my-4 mx-0">Confirmar Inserção de Documentos</button>
+    <p>Documentos selecionados e ainda não utilizados em movimentação</p>
+    <table class="table table-sm table-stripped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Formato</th>
+                <th scope="col">Número Documento</th>
+                <th scope="col">Tamanho</th>
+                <th scope="col">Tipo Documento</th>
+                <th scope="col">Sigilo</th>
+                <th scope="col">Data Envio</th>
+                <th scope="col">ASsinaturas Digitais</th>
+                <th scope="col">Obs:</th>
+                <th scope="col">Excluir</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>PDF</td>
+                <td>123456789</td>
+                <td>Bytes</td>
+                <td>
+                    <a name="" id="" class="btn btn-sm btn-secondary" href="#" role="button">Alterar</a> PNG
+                </td>
+                <td>
+                    <a name="" id="" class="btn btn-sm btn-secondary" href="#" role="button">Alterar</a> Sem Sigilo
+                </td>
+                <td>13/10/2020 19:21</td>
+                <td>
+                    <a name="" id="" class="btn btn-sm btn-secondary" href="#" role="button">Adicionar</a>(Opcional)
+                </td>
+                <td></td>
+                <td>X</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>ss
+<div class="buttons_submit float-right ">
+    <a href="{% url 'page_four' %} " type="button " class="btn btn-primary btn-sm ">Anterior</a>
+    <a href=" " type="button " class="btn btn-secondary btn-sm ">Cancelar</a>
+    <a href="{% url 'final_page' %} " type="button " class="btn btn-secondary btn-sm ">Próximo</a>
+</div>
+
+{% endblock %}

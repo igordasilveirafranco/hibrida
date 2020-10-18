@@ -1,0 +1,130 @@
+ {% extends "base.html" %} {% load static%} {% block main %}
+<h3 class="h3">Peticionamento Eletrônico (3 de 5) - Partes Autoras </h3>
+<div class="container-fluid">
+    <p class="p_border">Informações do Processo >> Assuntos >> <span class="bolder"><b>Partes Autoras</b></span> >> Partes Réus >> Documentos
+    </p>
+</div>
+<form action="">
+    <div class="container-fluid container-grid">
+        <form>
+            <div class="row">
+                <div class="col">
+                    <label for="person" class="py-2">Tipo de Pessoa</label>
+                    <input type="text" class="form-control form-control-sm" id="person">
+                </div>
+                <div class="col">
+                    <label for="cpf" class="py-2">CPF:</label>
+                    <input type="text" class="form-control form-control-sm" id="cpf">
+                </div>
+                <div class="col">
+                    <label for="cpf" class="py-2">Pessoa Física sem CPF:</label>
+                    <div class="form-inline">
+                        <div class="form-check">
+                            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="opcao1" aria-label="...">
+                        </div>
+                        <input type="text" class="form-control form-control-sm" id="cpf">
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="cpf" class="py-2">Outro Documentos:</label>
+                    <input type="text" class="form-control form-control-sm" id="cpf">
+                </div>
+                <div class="col">
+                    <label for="cpf" class="py-2">.</label>
+                    <input type="text" class="form-control form-control-sm" id="cpf">
+                </div>
+            </div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="" class="my-2">Pesquisar pelo Nome</label>
+                    <input type="text" name="" id="" class="form-control form-control-sm">
+
+                </div>
+                <button class="btn btn-sm btn-secondary">Consultar</button>
+            </form>
+        </form>
+
+    </div>
+
+    <div class="container-fluid pt-3">
+        <h5>Partes (autoras) cadastradas e ainda não visualizadas neste ajuizamento</h5>
+        <table class="table table-sm table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col" colspan="3">Nome</th>
+                    <th scope="col">CPF/CNPJ</th>
+                    <th scope="col">Tipo de Pasta</th>
+                    <th scope="col">Principal</th>
+                    <th scope="col">Tipo Representação</th>
+                    <th scope="col">Principal</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row" colspan="3">Fausto de Morais</td>
+                    <td>000.000.000-00</td>
+                    <td>AUTOR</td>
+                    <td>Sim</td>
+                    <td>
+                        <a name="" id="" class="btn btn-sm btn-secondary" href="#" role="button">Definir</a> (Opcional)
+                    </td>
+                    <td>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                         <option>1</option>
+                         <option>2</option>
+                         <option>3</option>
+                         <option>4</option>
+                         <option>5</option>
+                       </select>
+                    </td>
+                    <td>
+                        <i class="fa fa-xing" aria-hidden="true"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row px-2">
+            <div class="col-8">
+                <h5>Custos Processuais</h5>
+                <p style="color: rgb(175, 12, 12);">Não há registro de guias geradas para este processo</p>
+                <h5>Totalizador de partes:</h5>
+                <table class="table table-sm table-stripped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Nº de Partes</th>
+                            <th scope="col">Nº das Pastas Principais</th>
+                            <th scope="col">Nº das Pastas Entidades</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">AUTOR</th>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Réu</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="buttons_submit float-right">
+        <a href="{% url 'page_two' %}" type="button" class="btn btn-secondary btn-sm">Anterior</a>
+        <a href="{% url 'page_four' %}" type="button" class="btn btn-primary btn-sm">Próximo</a>
+        <a href="" type="button" class="btn btn-secondary btn-sm">Cancelar</a>
+    </div>
+</form>
+
+{% endblock%}

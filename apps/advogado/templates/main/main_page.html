@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% load static%} {% block main %}
+<div class="container">
+    <form action="." method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="select">Processos</label>
+            <select class="form-control" id="select" name="key">
+                <option value=""></option>
+            {% for i in keys%}
+            <option value="{{i}}">{{i}}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+            <label for="number">Quantidade a sex exibida</label>
+            <input type="number" class="form-control" id="number" min="1" name="number">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+        </div>
+    </form>
+    {{result|safe}}
+</div>
+{% endblock %}

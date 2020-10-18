@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% load static%} {% block main %}
+<h3 class="h3">Peticionamento Eletrônico - Conclusão</h3>
+<div class="container-fluid conclusion">
+    <p class="p_border">Informações do Processo >> Assuntos >> Partes Autoras >> Partes Réus >> Documentos >> <span class="bolder"><b> Conclusão </b></span>
+    </p>
+</div>
+<div class="container container-grid">
+    <div class="container">
+        <p>A peça apresenta assuntos similares à Demanda Repetitva decidida no Superior Tribunal de Justiça.<br> Você gostaria de linkar seu processo a este tema no Cadastramento Processual?</p>
+    </div>
+    <div class="buttons_submit buttons_submit_final">
+        <a href="#" type="button " class="btn btn-outline-secondary">Não</a>
+        <a href="#" type="button " class="btn btn-primary">Sim</a>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="pdf_container">
+                <embed src="{{arquivo.arq.url}}" class="pdf_block" type="application/pdf" frameBorder="0" scrolling="auto">
+            </div>
+        </div>
+        <div class="col d-flex justify-conten-center">
+            <div class="img_container">
+                <img src="{% static 'img/milEsete.png'%}" alt="" class="responsive">
+                <div class="assunpt">
+                    <div id="conteudoPopup" class="conteudoPopupClass">
+                        1. (195) DIREITO PREVIDENCIÁRIO;
+                        <br> 2. (6094) Benefícios em Espécie;
+                        <br> 3. (6096) Aposentadoria por Idade (Art. 48/51);
+                        <br> 4. (6184) Averbação/Cômputo de tempo de serviço rural (empregado/empregador);
+                        <br> 5. (6188) Averbação/Cômputo de tempo de serviço urbano.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="buttons_submit float-right ">
+    <a href="{% url 'page_five' %} " type="button " class="btn btn-primary btn-sm ">Anterior</a>
+    <a href="{% url 'main_page' %} " type="button " class="btn btn-secondary btn-sm ">Encerrar</a>
+</div>
+{% endblock %}

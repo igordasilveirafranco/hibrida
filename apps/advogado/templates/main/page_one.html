@@ -1,0 +1,92 @@
+{% extends "base.html" %} {% load static%} {% block main %}
+
+<h3 class="h3">Peticionamento Eletrônico (1 de 5) - Informações do Processo</h3>
+<div class="container-fluid">
+    <p class="p_border"><span class="bolder"><b>Informações do Processo</b></span> >> Assuntos >> Partes Autoras >> Partes Réus >> Documentos
+    </p>
+</div>
+<form action="">
+    <div class="container-fluid container-grid">
+        <p class="title_over">Informações Preliminares</p>
+        <div class="row">
+            <div class="col-sm">
+                <label for="action">Desejo entrar com a ação em</label>
+                <select class="form-control form-control-sm" id="action">
+                    <option></option>
+                </select>
+                <label for="face">Rosto</label>
+                <select class="form-control form-control-sm" id="face">
+                    <option></option>
+                </select>
+                <label for="class">Classe Processual</label>
+                <select class="form-control form-control-sm" id="class">
+                    <option></option>
+                </select>
+                <label for="nivel">Nível de Sigilo do Processo</label>
+                <select class="form-control form-control-sm" id="nivel">
+                    <option>Sem Sigilo(Nível 0)</option>
+                </select>
+                <label for="proccess">Processo Originário</label>
+                <input class="form-control form-control-sm" type="text" id="proccess">
+                <label for="judge">Julgo</label>
+                <input class="form-control form-control-sm" type="text" id="judge">
+            </div>
+            <div class="col-sm">
+                <div class="form-row form-row-sm">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4" class="bolder">Valor da causa</label>
+                        <input type="text" class="form-control form-control-sm" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-6 bolder">
+                        <label for="inputPassword4">Previsão de Custos</label>
+                        <p>R$ 50,00</p>
+                    </div>
+                </div>
+                <div class="form-group col-md-10 mt-2">
+                    <label for="inputAddress" class="pb-1">Outros advogados a serem incluídos</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-sm pt-2" id="inlineFormInputGroup">
+                        <div class="input-group-append">
+                            <div class="input-group-text">Incluir</div>
+                        </div>
+                    </div>
+                    <!-- <button class="btn btn-over btn-secondary" value="Incluir"> Incluir</button> -->
+                </div>
+            </div>
+            <!-- fim da segunda coluna -->
+            <div class="col-sm ">
+                <div class="text_box text-justify">
+                    <p class="font-weight-bold">Para adicionar o plantão é necessário<br> telefonar.Verifique se a situação se
+                        <br> enquadra na norma, bem como os telefones<br> do contato :
+                        <a href="">
+                            clicando aqui.
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- teste -->
+        <!-- <div class="try_table">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="3">Usuário</th>
+                        <th scope="col">Ações</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> -->
+    </div>
+    <div class="buttons_submit float-right">
+        <a href="{% url 'page_two' %}" type="button" class="btn btn-primary btn-sm">Próximo</a>
+        <a href="" type="button" class="btn btn-secondary btn-sm">Cancelar</a>
+    </div>
+</form>
+{% endblock %}
