@@ -5,12 +5,11 @@
     </p>
 </div>
 <div class="container container-grid">
-    <div class="container">
-        <p>A peça apresenta assuntos similares à Demanda Repetitva decidida no Superior Tribunal de Justiça.<br> Você gostaria de linkar seu processo a este tema no Cadastramento Processual?</p>
-    </div>
+    <h5 class="h5 pt-5 text-center text-lawyer">A tela abaixo indica que o assunto da petição é similar ao seguinte tema presente nos tribunais superiores:</h5>
+    <p class="text-center">Você gostaria de manter a vinculação cadastral do processo a(os) tema(s) indicados para análise do magistrado?</p>
     <div class="buttons_submit buttons_submit_final">
-        <a href="#" type="button " class="btn btn-outline-secondary">Não</a>
-        <a href="#" type="button " class="btn btn-primary">Sim</a>
+        <a href="#" type="button " class="btn btn-outline-secondary text-dark">Não</a>
+        <a href="{% url 'page_sucesso'%}" type="button " class="btn btn-primary">Sim</a>
     </div>
     <div class="row">
         <div class="col">
@@ -21,7 +20,7 @@
         <div class="col d-flex justify-conten-center">
             <div class="img_container">
                 <img src="{% static 'img/milEsete.png'%}" alt="" class="responsive">
-                <div class="assunpt">
+                <div class="assunpt" title="">
                     <div id="conteudoPopup" class="conteudoPopupClass">
                         1. (195) DIREITO PREVIDENCIÁRIO;
                         <br> 2. (6094) Benefícios em Espécie;
@@ -36,6 +35,6 @@
 </div>
 <div class="buttons_submit float-right ">
     <a href="{% url 'page_five' %} " type="button " class="btn btn-primary btn-sm ">Anterior</a>
-    <a href="{% url 'main_page' %} " type="button " class="btn btn-secondary btn-sm ">Encerrar</a>
+    <a href="{% url 'principal' %} " type="button " class="btn btn-secondary btn-sm ">Encerrar</a>
 </div>
 {% endblock %}

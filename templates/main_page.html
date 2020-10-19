@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% load static%} {% block main %}
+<div class="container_begin ">
+    <div class="container_begin_inside text-center animated fadeIn">
+        <h3 class="mb-3">Iniciar a simulação como:</h3>
+        <a href="{% url 'page_two'%}" class="btn btn-primary mb-3 btn_first">Advogado</a>
+        <br>
+        <a href="{% url 'magistrado_one'%}" class="btn btn-danger btn_first">Magistrado</a>
+    </div>
+</div>
+{% endblock %}

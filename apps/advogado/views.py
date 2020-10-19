@@ -17,6 +17,20 @@ def page_one(request):
 
 def page_two(request):
     template = 'main/page_two.html'
+    print('aqui')
+    if request.method == 'POST' and request.FILES['myfile']:
+        proc =Processo.objects.create(
+            arq=request.FILES['myfile'],
+            numero=str(randrange(10000,99999))+str(randrange(10000,99999))+str(randrange(10000,99999))+str(randrange(10000,99999))
+        )  
+        form = DocumentForm()
+        
+        form.arq =request.FILES['myfile']        
+        myfile = request.FILES['myfile']
+        nome = myfile.name
+        #read_pdf_to_txt(proc.arq.url,nome)
+        form.save(commit=False)
+        return render(request, 'main/final_page.html',{'arquivo':proc})
     context = {}
     return render(request, template, context)
 
@@ -43,19 +57,7 @@ def simple_upload(request):
 def page_five(request):
 
     template = 'main/page_five.html'
-    if request.method == 'POST' and request.FILES['myfile']:
-        proc =Processo.objects.create(
-            arq=request.FILES['myfile'],
-            numero=str(randrange(10000,99999))
-        )
-        form = DocumentForm()
-        
-        form.arq =request.FILES['myfile']        
-        myfile = request.FILES['myfile']
-        nome = myfile.name
-        read_pdf_to_txt(proc.arq.url,nome)
-        form.save(commit=False)
-        return render(request, 'main/final_page.html',{'arquivo':proc})
+   
 
     context = {}
     return render(request, template, context)
@@ -70,7 +72,11 @@ def move_arquivo(nome):
     arquivo = os.listdir("media/")
     shutil.move("media/"+arquivo[0],"static/pdf/"+arquivo[0])
    
-    
+def page_sucesso(request):
+   template = 'main/page_sucesso.html'
+   context = {}
+   return render(request, template, context)
+   
 
 
 

@@ -1,0 +1,43 @@
+{% extends 'base.html'%} {% load static %}{% block main%}
+
+<h3 class="h1 text-center">Magistrado</h3>
+<div class="container-fluid container-grid animated fadeIn">
+    {%if processo.tema == 0%}
+    <h5 class="h5 pt-5 text-center text-lawyer">Este processo apresenta probabilidade de similaridade com o(s) seguinte(s) tema(s) nos tribunais superiores:</h5>
+    {% endif %}
+    <div class="row">
+        <div class="col">
+            <div class="pdf_container">
+                <embed src="{{processo.arq.url}}" class="pdf_block" type="application/pdf" frameBorder="0" scrolling="auto">
+            </div>
+        </div>
+        <div class="col d-flex justify-conten-center">
+            <div class="img_container">
+                {%if processo.tema == 0%}
+                <img src="{% static 'img/milEsete.png'%}" alt="" class="responsive">
+                <div class="assunpt" title="">
+                    <div id="conteudoPopup" class="conteudoPopupClass">
+                        1. (195) DIREITO PREVIDENCIÁRIO;
+                        <br> 2. (6094) Benefícios em Espécie;
+                        <br> 3. (6096) Aposentadoria por Idade (Art. 48/51);
+                        <br> 4. (6184) Averbação/Cômputo de tempo de serviço rural (empregado/empregador);
+                        <br> 5. (6188) Averbação/Cômputo de tempo de serviço urbano.
+                    </div>
+                </div>
+                {%else%}
+                <p></p>
+                {%endif%}
+            </div>
+        </div>
+    </div>
+    {%if processo.tema == 0%}
+    <div class="container">
+        <h5 class="h5 text-center">Manter Vinculação?</h5>
+        <div class="buttons_submit text-center buttons_submit_magistrado">
+            <a href="#" type="button" class="btn btn-over btn-secondary">Desvincular</a>
+            <a href="#" type="button" class="btn btn-over btn-danger btn-lg">Manter	 </a>
+        </div>
+    </div>
+    {%endif%}
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html'%} {% load static %}{% block main%}
+
+<h3 class="h1 text-center">Magistrado - Conclusão</h3>
+<div class="container-fluid container-grid animated fadeIn">
+    <h5 class="h3 pt-5 text-center">Escolha os temas </h5>
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <th scope="col">Número do Processo</th>
+                <th scope="col">Arquivo</th>
+                <th scope="col">Temas Repetitvos</th>
+                <!-- <th scope="col">Visualizar o tema</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in processos %}
+            <tr>
+                <th scope="row">
+                    <a href="{% url 'magistrado_detail' p.numero %}" class="table_a">{{p.numero}}</a>
+                </th>
+                <td>{{p.arq}}</td>
+                {% if p.tema == 0%}
+                <td>Sim / TEMA 1007</td>
+                {% else %}
+                <td>OUTROS</td>
+                {%endif%}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}

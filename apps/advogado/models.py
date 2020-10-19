@@ -6,7 +6,7 @@ class Processo(models.Model):
         (1, "OUTROS"),
     )
     cod_processo = models.AutoField(primary_key=True)
-    numero = models.CharField(max_length=6)
+    numero = models.CharField(max_length=20)
     arq = models.FileField(upload_to="pdf/")
     tema = models.CharField(max_length=1, choices=TEMA_CHOICES, blank=False, null=False,default=1)
     class Meta:
