@@ -1,3 +1,7 @@
+# CNJ-1
+
+![SIAJUS](https://user-images.githubusercontent.com/37173966/96637516-2a3f2180-12f5-11eb-9178-ee60045ce233.jpeg)
+
 # Híbrida
 
 É um projeto que assegura a redução no tempo de tramitação dos processos, a concretização do princípio da eficiência administrativa, auxilia no descongestionado do sistema judicial, assegura incremento da agilidade associando possiveis códigos de assunto locais com os codigos de assuntos CNJ.
@@ -7,10 +11,23 @@
 Para executar o projeto, será necessário instalar:
 
 - [Python 3 (ou acima) : Necessário para executar o projeto](https://www.python.org/downloads)
+- [Django 3 (ou acima) : Necessário para executar o projeto](https://www.djangoproject.com/download/)
+
 
 ## Desenvolvimento
 
-Para iniciar o desenvolvimento, você poderá acessar pelo site : http://191.235.110.9:8000/ ou poderá clonar o projeto direto na sua máquina em um diretório de sua preferência. 
+Híbrida têm uma aplicação relativamente simples, para iniciar o desenvolvimento, basta acessar pelo navegador de sua preferência o link (http://191.235.110.9:8000/)  
+
+O link levará direto ao ambiente executável de Híbrida em que o usuário poderá navegar como advogado ou magistrado.  
+
+No comando advogado, é possivel incluir peças digitalizadas ou não, para que a máquina detecte se trata de um Tema repetitivo ou não. Os arquivos enviados serão lidos, os textos e palavras vetorizadas, para então fazer um levantamento otimizado do conjunto de palavras, que caracterizam como atributos necessários para a classificação de um tema repetitivo.
+
+![tela2adv](https://user-images.githubusercontent.com/37173966/96637481-1c899c00-12f5-11eb-9ad3-a287a8b5bd69.png)
+
+Após realizada esta análise, Híbrida retorna com uma assertividade maior que 93% de que o texto e seu conjunto de palavras pertencem a um tema repetitivo. (O protótipo analisa apenas o tema repetitivo 1007)
+
+![tela3Conc](https://user-images.githubusercontent.com/37173966/96638347-55764080-12f6-11eb-9efc-233c11ccece7.png)
+
 
 shell
 cd "diretorio de sua preferencia"
@@ -26,6 +43,7 @@ user@maqui:diretorio_projeto/ python3.7 manager.py runserver
 
 
 O comando irá baixar todas as dependências do projeto e criar um diretório target com os artefatos construídos.
+
 # Instalando Dependência
 
 $ pip3 install -r requirements.txt
