@@ -19,6 +19,7 @@
         </div>
         <div class="col d-flex justify-conten-center">
             <div class="img_container">
+                {% if arquivo.tema == 0 %}
                 <img src="{% static 'img/milEsete.png'%}" alt="" class="responsive">
                 <div class="assunpt" title="">
                     <div id="conteudoPopup" class="conteudoPopupClass">
@@ -29,6 +30,8 @@
                         <br> 5. (6188) Averbação/Cômputo de tempo de serviço urbano.
                     </div>
                 </div>
+                {% else %}
+                <h5 class="text-center text-lawyer">Demanda repetitiva não encontrada</h5>{% endif %}
             </div>
         </div>
     </div>

@@ -179,7 +179,7 @@
             </div>
             <div class="text_box_two text-justify">
                 <div class="">
-                    <form method="POST" enctype="multipart/form-data">
+                    <form id="form_pdf" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         <p class="title_over_doc">[ Documentos ]</p>
                         <div class="form-inline mt-2">
@@ -187,8 +187,8 @@
                                 <label for="staticEmail2" class="">Enviar Arquivo:</label>
                             </div>
                             <div class="form-group mx-sm-3 mb-2">
-                                <input id="" name="myfile" data-toggle="modal" type="file" class="form-control-sm">
-                                <button type="submit" class="btn btn-danger">Enviar</button>
+                                <input id="input_field" name="myfile" type="file" class="form-control-sm">
+                                <button id="load_field" type="submit" class="btn btn-danger" disabled>Enviar</button>
                             </div>
                         </div>
                     </form>

@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
-pd.set_option('display.max_colwidth', -1) # para visualizar as colunas largas com o pandas
-
+import os
 import matplotlib.pyplot as plt
 import itertools
 import time
@@ -10,9 +9,6 @@ from sklearn.utils import shuffle
 
 import unidecode
 from string import punctuation
-import nltk
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
@@ -31,13 +27,12 @@ from scipy import interp
 import matplotlib.patches as patches
 
 from string import punctuation
-
+import pickle
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
-
-
-import pickle
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
 
 def corrigirAcentos(texto):
     texto = unidecode.unidecode(texto)
@@ -50,6 +45,7 @@ def corrigirAcentos(texto):
 stopwords = set(stopwords.words('portuguese') + list(punctuation))
 
 def remove_stopwords(text):
+    
     # remove pontuações e caracteres especiais
     chars = ['0','1','2','3','4','5','6','7','8','9','"',
              '»', '«', '’','“','\r','\n','\t','.','\'','\'',
@@ -89,14 +85,19 @@ def preproc(textos):
     return textos
 
 def brain_analise(texto):
-    text_proc = preproc(texto)
-    vectorizer = TfidfVectorizer(use_idf=True, sublinear_tf=True, min_df=5)
-    X_teste = vectorizer.fit_transform(text_proc)
-    file= open("model",'rb')
+    
+    df = pd.Series(texto)
+    cwd = os.getcwd() 
+    file= open(cwd+"/apps/advogado/vector",'rb')
+    vectorTreino = pickle.load(file,encoding='bytes')
+    file.close()
+    text_proc = preproc(df)
+    vectorizer = vectorTreino
+    X_teste = vectorizer.transform(text_proc)
+    file= open(cwd+"/apps/advogado/model_lsvm_word",'rb')
     model = pickle.load(file,encoding='bytes')
     file.close()
     y_pred =  model.predict(X_teste)
-
-    return y_pred
+    return y_pred 
 
     
