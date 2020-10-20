@@ -2,7 +2,7 @@
 
 É um projeto que assegura a redução no tempo de tramitação dos processos, a concretização do princípio da eficiência administrativa, auxilia no descongestionado do sistema judicial, assegura incremento da agilidade associando possiveis códigos de assunto locais com os codigos de assuntos CNJ.
 
-## Começando ..
+## Começando .
 
 Para executar o projeto, será necessário instalar:
 
@@ -10,22 +10,28 @@ Para executar o projeto, será necessário instalar:
 
 ## Desenvolvimento
 
-Para iniciar o desenvolvimento, você poderá acessar pelo site : ????????    ou poderá clonar o projeto direto na sua máquina em um diretório de sua preferência. 
+Para iniciar o desenvolvimento, você poderá acessar pelo site : http://191.235.110.9:8000/ ou poderá clonar o projeto direto na sua máquina em um diretório de sua preferência. 
 
 shell
 cd "diretorio de sua preferencia"
-git clone https://github.com/CNJ/Hibrida
+git clone https://github.com/andersonsimplicio/hibrida.git
 
 
 ### Executar
 
 Para executar o projeto via web basta utilizar o link: http://191.235.110.9:8000/
 
-Ou no computador local, após a instalação das depedências no shell
-$ python3.7 manager.py runserver
+Ou no computador local, após a instalação das depedências descrita no requirements.txt no shell
+user@maqui:diretorio_projeto/ python3.7 manager.py runserver
 
 
 O comando irá baixar todas as dependências do projeto e criar um diretório target com os artefatos construídos.
+# Instalando Dependência
+
+$ pip3 install -r requirements.txt
+
+OBS: algumas bibliotecas terão dependência especifica de acordo com o sistema operacional usado, o sistema hibrida foi projetado
+para servidores debian/ubuntu.
 
 ## Configuração
 
