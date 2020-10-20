@@ -439,3 +439,7 @@ a:hover {
 .table_a:visited {
     color: rgb(44, 35, 186);
 }
+
+.text-sm {
+    font-size: 10px;
+}

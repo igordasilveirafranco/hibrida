@@ -1,5 +1,7 @@
 {% extends "base.html" %} {% load static%} {% block main %}
-
+<div id="loader" class="loader hidden">
+    <img src="{% static 'img/logo.gif'%}" alt="">
+</div>
 <h3 class="h3">Peticionamento Eletrônico (2 de 5) - Assuntos</h3>
 <div class="container-fluid">
     <p class="p_border">Informações do Processo >> <span class="bolder"><b>Assuntos</b></span> >> Partes Autoras >> Partes Réus >> Documentos
@@ -192,6 +194,7 @@
                             </div>
                         </div>
                     </form>
+                    <span class="text-sm"> * Arquivos suportados .PDF ou .TXT</span><br>
                 </div>
             </div>
             <div class="text-center mx-auto ">

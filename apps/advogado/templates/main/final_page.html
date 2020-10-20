@@ -4,40 +4,33 @@
     <p class="p_border">Informações do Processo >> Assuntos >> Partes Autoras >> Partes Réus >> Documentos >> <span class="bolder"><b> Conclusão </b></span>
     </p>
 </div>
-<div class="container container-grid">
-    <h5 class="h5 pt-5 text-center text-lawyer">A tela abaixo indica que o assunto da petição é similar ao seguinte tema presente nos tribunais superiores:</h5>
-    <p class="text-center">Você gostaria de manter a vinculação cadastral do processo a(os) tema(s) indicados para análise do magistrado?</p>
+<div class="container-fluid container-grid">
+    {% if file.tema == 0 %}
+    <h5 class="h5 pt-5 text-center text-lawyer">Demanda repetitiva tema 1007 STJ detectada</h5>
+    <p class="text-center">Vincular o resultado ?</p>
     <div class="buttons_submit buttons_submit_final">
-        <a href="#" type="button " class="btn btn-outline-secondary text-dark">Não</a>
+        <a href="{% url 'page_sucesso'%}" type="button " class="btn btn-outline-secondary text-dark">Não</a>
         <a href="{% url 'page_sucesso'%}" type="button " class="btn btn-primary">Sim</a>
     </div>
+    {%else%}
+    <h5 class="text-center text-lawyer">Demanda repetitiva não encontrada</h5>
+    <div class="buttons_submit buttons_submit_final">
+        <a href="{% url 'page_two' file.numero %}" type="button" class="btn btn-outline-secondary text-dark">Retornar</a>
+        <a href="{% url 'page_sucesso'%}" type="button " class="btn btn-primary">Prosseguir</a>
+    </div>
+    {%endif%}
     <div class="row">
         <div class="col">
             <div class="pdf_container">
-                <embed src="{{arquivo.arq.url}}" class="pdf_block" type="application/pdf" frameBorder="0" scrolling="auto">
+                <embed src="{{file.arq.url}}" class="pdf_block" type="application/pdf" frameBorder="0" scrolling="auto">
             </div>
         </div>
         <div class="col d-flex justify-conten-center">
             <div class="img_container">
-                {% if arquivo.tema == 0 %}
-                <img src="{% static 'img/milEsete.png'%}" alt="" class="responsive">
-                <div class="assunpt" title="">
-                    <div id="conteudoPopup" class="conteudoPopupClass">
-                        1. (195) DIREITO PREVIDENCIÁRIO;
-                        <br> 2. (6094) Benefícios em Espécie;
-                        <br> 3. (6096) Aposentadoria por Idade (Art. 48/51);
-                        <br> 4. (6184) Averbação/Cômputo de tempo de serviço rural (empregado/empregador);
-                        <br> 5. (6188) Averbação/Cômputo de tempo de serviço urbano.
-                    </div>
-                </div>
-                {% else %}
-                <h5 class="text-center text-lawyer">Demanda repetitiva não encontrada</h5>{% endif %}
+                {% if file.tema == 0 %}
+                <img src="{% static 'img/milEsete.png'%}" alt="" class="responsive"> {% endif %}
             </div>
         </div>
     </div>
-</div>
-<div class="buttons_submit float-right ">
-    <a href="{% url 'page_five' %} " type="button " class="btn btn-primary btn-sm ">Anterior</a>
-    <a href="{% url 'principal' %} " type="button " class="btn btn-secondary btn-sm ">Encerrar</a>
 </div>
 {% endblock %}

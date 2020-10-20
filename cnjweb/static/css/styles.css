@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 0 0 50px 0;
     list-style: none;
     vertical-align: baseline;
     box-sizing: border-box;
@@ -463,4 +463,12 @@ a:hover {
 
 .loader img {
     width: 100px;
+}
+
+.responsive:hover {
+    transform: scale(1.5, 1.5);
+    margin-left: -200px !important;
+    margin-bottom: -200px;
+    border: 2px solid black;
+    border-radius: 5px;
 }

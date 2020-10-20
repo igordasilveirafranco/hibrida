@@ -88,15 +88,19 @@ def brain_analise(texto):
     
     df = pd.Series(texto)
     cwd = os.getcwd() 
+   
+    #Carrega o vetor já treinado
     file= open(cwd+"/apps/advogado/vector",'rb')
     vectorTreino = pickle.load(file,encoding='bytes')
     file.close()
     text_proc = preproc(df)
     vectorizer = vectorTreino
     X_teste = vectorizer.transform(text_proc)
+     #Carrega o modelo da IA já treinado
     file= open(cwd+"/apps/advogado/model_lsvm_word",'rb')
     model = pickle.load(file,encoding='bytes')
     file.close()
+    #Realiza a predição e retrona
     y_pred =  model.predict(X_teste)
     return y_pred 
 
