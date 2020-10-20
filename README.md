@@ -30,10 +30,10 @@ Após realizada esta análise, Híbrida retorna com uma assertividade maior que 
 
 
 shell
-'''
+```
 cd "diretorio de sua preferencia"
 git clone https://github.com/andersonsimplicio/hibrida.git
-'''
+```
 
 ### Executar
 
@@ -46,9 +46,9 @@ user@maqui:diretorio_projeto/ python3.7 manager.py runserver
 O comando irá baixar todas as dependências do projeto e criar um diretório target com os artefatos construídos.
 
 # Instalando Dependência
-'''
+```
 $ pip3 install -r requirements.txt
-'''
+```
 OBS: algumas bibliotecas terão dependência especifica de acordo com o sistema operacional usado, o sistema hibrida foi projetado
 para servidores debian/ubuntu.
 
