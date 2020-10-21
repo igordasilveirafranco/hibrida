@@ -18,6 +18,8 @@ Para executar o projeto, será necessário instalar:
 
 ## Desenvolvimento
 
+![desenvolvimento](https://user-images.githubusercontent.com/25744353/96757803-4f429b80-13ac-11eb-8834-ffca3dc95cc9.jpeg)
+
 Híbrida tem uma aplicação relativamente simples e fácil manuseio. Para iniciar o desenvolvimento basta acessar pelo navegador de sua preferência o link (http://191.235.110.9:8000/).
 
 O link levará direto ao ambiente executável de Híbrida, em que o usuário poderá navegar como advogado ou magistrado/servidor do Judiciário.  
@@ -30,6 +32,9 @@ Após, realizada esta análise, Híbrida retorna com uma assertividade maior que
 
 ![tela3Conc](https://user-images.githubusercontent.com/37173966/96638347-55764080-12f6-11eb-9efc-233c11ccece7.png)
 
+Em resumo:
+
+![funcionamento](https://user-images.githubusercontent.com/25744353/96758272-f293b080-13ac-11eb-86aa-576d2fef3ae3.jpeg)
 
 shell
 ```
