@@ -56,8 +56,10 @@ git clone https://github.com/andersonsimplicio/hibrida.git
 ### Executar
 
 No computador local, após a instalação das depedências descritas no requirements.txt no shell
-user@computador:diretorio_projeto/ python3.7 manager.py runserver
 
+```
+user@computador:diretorio_projeto/ python3.7 manager.py runserver
+```
 
 O comando irá baixar todas as dependências do projeto e criar um diretório target com os artefatos construídos.
 
@@ -81,6 +83,11 @@ Após a inserção do arquivo pdf e/ou txt o Híbrida classificará se a peça s
 Magistrado/servidor do Judiciário
 
 Na área restrita ao magistrado e/ou servidor poderá ser avaliado cada processo ajuizado e verificar quais são as demandas repetitivas e em seguida realizar o parecer/decisão do magistrado. Nesta parte, se houver uma divergência entre a IA e o advogado haverá uma sinalização na tela com a frase "divergência Apontada".
+
+## Licença
+
+Não se aplica. 
+Híbrida foi totalmente produzido por nossa equipe com softwares livres.
 
 ## Youtube
 [![image](https://user-images.githubusercontent.com/25744353/96781107-56c16f00-13c3-11eb-87b3-a510e00d8fab.png)](https://youtu.be/-APaK6O6eHs "Pitch Híbrida. 21/10/20")
