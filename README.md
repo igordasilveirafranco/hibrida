@@ -74,4 +74,10 @@ Para o ótimo desempenho do projeto é imprescindível que os aquivos para a cla
 
 ## Ambiente
 
-Após a inserção do arquivo pdf e/ou txt o Híbrida classificará se a peça se enquadra em um tema repetitivo do 1007 ou não. Caso seja positiva esta afirmação, proporcionará ao advogado relatar se está em acordo com a IA ou não, quanto a identificação do tema repetitivo
+Advogado
+
+Após a inserção do arquivo pdf e/ou txt o Híbrida classificará se a peça se enquadra em um tema repetitivo do 1007 ou não. Caso seja positiva esta afirmação, proporcionará ao advogado informar se está em acordo com a IA ou não, quanto a identificação do tema repetitivo.
+
+Magistrado/servidor do Judiciário
+
+Na área restrita ao magistrado e/ou servidor poderá ser avaliado cada processo ajuizado e verificar quais são as demandas repetitivas e em seguida realizar o parecer/decisão do magistrado. Nesta parte, se houver uma divergência entre a IA e o advogado haverá uma sinalização na tela com a frase "divergência Apontada".
