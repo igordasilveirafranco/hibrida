@@ -10,7 +10,7 @@
 O presente projeto visa atender as demandas propostas pelo desafio 1 TEMPO E PRODUTIVIDADE do edital CNJ INOVA fase 1.
 
 
-## Começando .
+## Começando
 
 Para executar o projeto, será necessário instalar:
 
@@ -19,8 +19,6 @@ Para executar o projeto, será necessário instalar:
 
 
 ## Desenvolvimento
-
-![desenvolvimento](https://user-images.githubusercontent.com/25744353/96757803-4f429b80-13ac-11eb-8834-ffca3dc95cc9.jpeg)
 
 Híbrida tem uma aplicação relativamente simples e fácil manuseio. Para iniciar o desenvolvimento basta acessar pelo navegador de sua preferência o link (http://191.235.110.9:8000/).
 
@@ -34,17 +32,28 @@ Após, realizada esta análise, Híbrida retorna com uma assertividade maior que
 
 ![tela3Conc](https://user-images.githubusercontent.com/37173966/96638347-55764080-12f6-11eb-9efc-233c11ccece7.png)
 
-Em resumo:
+## Arquitetura da solução
+
+A Híbrida está implantantada em um servidor Linux CentOS v8, em uma máquina virtual da Microsoft Azure.
+A linguagem escolhida para sua implementação foi o Python, além do Framework Django.
+
+Abaixo, o diagrama de arquitetura:
+
+![desenvolvimento](https://user-images.githubusercontent.com/25744353/96757803-4f429b80-13ac-11eb-8834-ffca3dc95cc9.jpeg)
+
+## Fluxo de dados
+
+Segue abaixo o diagrama de fluxo de dados da ferramenta
 
 ![funcionamento](https://user-images.githubusercontent.com/25744353/96758272-f293b080-13ac-11eb-86aa-576d2fef3ae3.jpeg)
 
 
-### Executar na web
+## Executar na web
 
 Para executar o projeto via web basta utilizar o link: http://191.235.110.9:8000/
 
 
-### Processo de instalação em um computador local
+## Processo de instalação em um computador local
 
 shell
 
@@ -53,13 +62,11 @@ cd "diretorio de sua preferencia"
 git clone https://github.com/andersonsimplicio/hibrida.git
 ```
 
-### Executar
+## Executar
 
 No computador local, após a instalação das depedências descritas no requirements.txt no shell
-
-```
 user@computador:diretorio_projeto/ python3.7 manager.py runserver
-```
+
 
 O comando irá baixar todas as dependências do projeto e criar um diretório target com os artefatos construídos.
 
@@ -68,26 +75,23 @@ O comando irá baixar todas as dependências do projeto e criar um diretório ta
 ```
 $ pip3 install -r requirements.txt
 ```
-OBS: Algumas bibliotecas terão dependência específica de acordo com o sistema operacional utilizado. O sistema Híbrida foi projetado para servidores debian/ubuntu.
+OBS: Algumas bibliotecas terão dependência específica de acordo com o sistema operacional utilizado. O sistema Híbrida foi projetado em Linux e implantado em CentOS neste Hackathon.
 
 ## Configuração
 
-Para o ótimo desempenho do projeto é imprescindível que os aquivos para a classificação sejam PDF ou txt. O nome do arquivo a ser enviado para a classificação não pode conter caracteres especiais e/ou pontuações. 
+Para o ótimo desempenho do projeto é imprescindível que os aquivos para a classificação sejam PDF ou txt. O nome do arquivo a ser enviado para a classificação não pode conter caracteres especiais (ex.: ç, à e outros) e/ou pontuações. 
 
 ## Ambiente
 
-Advogado
+Caso de uso pelo Advogado
 
-Após a inserção do arquivo pdf e/ou txt o Híbrida classificará se a peça se enquadra em um tema repetitivo do 1007 ou não. Caso seja positiva esta afirmação, proporcionará ao advogado informar se está em acordo com a IA ou não, quanto a identificação do tema repetitivo.
+Após a inserção do arquivo, em formato PDF ou txt, o Híbrida classificará a peça quanto ao enquadramento em um Tema repetitivo 1007. Caso a peça inserida tenha sido identificada como positiva, proporcionará ao advogado informar se está em acordo quanto a identificação do Tema repetitivo.
 
-Magistrado/servidor do Judiciário
+
+Caso de uso pelo Magistrado/servidor do Judiciário
 
 Na área restrita ao magistrado e/ou servidor poderá ser avaliado cada processo ajuizado e verificar quais são as demandas repetitivas e em seguida realizar o parecer/decisão do magistrado. Nesta parte, se houver uma divergência entre a IA e o advogado haverá uma sinalização na tela com a frase "divergência Apontada".
 
-## Licença
-
-Não se aplica. 
-Híbrida foi totalmente produzido por nossa equipe com softwares livres.
-
 ## Youtube
+
 [![image](https://user-images.githubusercontent.com/25744353/96781107-56c16f00-13c3-11eb-87b3-a510e00d8fab.png)](https://youtu.be/-APaK6O6eHs "Pitch Híbrida. 21/10/20")
