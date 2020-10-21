@@ -81,3 +81,6 @@ Após a inserção do arquivo pdf e/ou txt o Híbrida classificará se a peça s
 Magistrado/servidor do Judiciário
 
 Na área restrita ao magistrado e/ou servidor poderá ser avaliado cada processo ajuizado e verificar quais são as demandas repetitivas e em seguida realizar o parecer/decisão do magistrado. Nesta parte, se houver uma divergência entre a IA e o advogado haverá uma sinalização na tela com a frase "divergência Apontada".
+
+## Youtube
+[![IMAGE ALT TEXT](https://github.com/andersonsimplicio/hibrida/issues/3#issue-726838215)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE "Video Title")
