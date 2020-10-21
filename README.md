@@ -1,7 +1,7 @@
 # CNJ-1
-<p align="center"> 
+
 ![hibrIdA](https://user-images.githubusercontent.com/37173966/96740018-cec57000-1396-11eb-8f6d-cb90afb63760.jpeg)
-</p>
+
 
 # Híbrida
 
