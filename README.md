@@ -36,7 +36,7 @@ Em resumo:
 
 ![funcionamento](https://user-images.githubusercontent.com/25744353/96758272-f293b080-13ac-11eb-86aa-576d2fef3ae3.jpeg)
 
-##Processo de Instalação em um computador local:
+### Processo de instalação em um computador local
 
 shell
 ```
