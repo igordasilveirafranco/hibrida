@@ -1,6 +1,6 @@
 # CNJ-1
 
-![SIAJUS](https://user-images.githubusercontent.com/37173966/96637516-2a3f2180-12f5-11eb-9178-ee60045ce233.jpeg)
+![hibrIdA](https://user-images.githubusercontent.com/37173966/96740018-cec57000-1396-11eb-8f6d-cb90afb63760.jpeg)
 
 # Híbrida
 
