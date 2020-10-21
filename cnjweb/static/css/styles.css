@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    padding: 0 0 50px 0;
+    padding: 0;
     list-style: none;
     vertical-align: baseline;
     box-sizing: border-box;
@@ -36,15 +36,24 @@ html {
     color: var(--font-color);
     width: 100%;
     height: 100%;
+    padding: 0 0 50px 0;
 }
 
 .container-fluid {
     width: 97% !important;
 }
 
+.navbar-brand {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 50%;
+}
+
 .navbar-brand img {
     width: 80px;
     height: 80px;
+    padding-bottom: 10px;
 }
 
 .navbar {
@@ -162,6 +171,7 @@ h3 {
     background-color: var(--title-color);
     width: 200px;
     padding-left: 10px;
+    color: black;
 }
 
 .title_over_two {
@@ -171,6 +181,7 @@ h3 {
     width: 100px;
     height: auto;
     padding-left: 10px;
+    color: black;
 }
 
 .title_over_doc {
@@ -179,6 +190,7 @@ h3 {
     background-color: var(--title-color);
     width: 130px;
     padding-left: 10px;
+    color: black;
 }
 
 .bolder {
@@ -211,6 +223,7 @@ h3 {
     border: 1px solid rgb(53, 52, 52);
     width: 100%;
     padding: 10px;
+    color: var(--font-color);
 }
 
 .text_box p {
@@ -269,6 +282,7 @@ h3 {
 
 .folder_title {
     text-transform: uppercase;
+    color: black;
 }
 
 .dr {
@@ -283,6 +297,7 @@ h3 {
 /* Page six */
 
 .pdf_container {
+    overflow: scroll;
     width: 100%;
     height: 400px;
     margin: 50px 0 50px 10px;
@@ -307,6 +322,14 @@ h3 {
 .responsive {
     width: 100%;
     height: auto;
+}
+
+.responsive:hover {
+    transform: scale(1.5, 1.5);
+    margin-left: -200px !important;
+    margin-bottom: -200px;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 .assunpt {
@@ -361,7 +384,7 @@ h3 {
 }
 
 a {
-    color: black;
+    color: var(--font-color);
 }
 
 a:hover {
@@ -439,6 +462,17 @@ a:hover {
     color: rgb(44, 35, 186);
 }
 
+.overlay {
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+
 .loader {
     position: fixed;
     z-index: 99;
@@ -465,10 +499,15 @@ a:hover {
     width: 100px;
 }
 
-.responsive:hover {
-    transform: scale(1.5, 1.5);
-    margin-left: -200px !important;
-    margin-bottom: -200px;
-    border: 2px solid black;
-    border-radius: 5px;
+.text-sm {
+    font-size: 10px;
+}
+
+.text-table {
+    color: var(--font-color);
+}
+
+.load_text {
+    margin-top: 120px;
+    color: black;
 }

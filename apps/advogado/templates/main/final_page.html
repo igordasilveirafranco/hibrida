@@ -9,14 +9,13 @@
     <h5 class="h5 pt-5 text-center text-lawyer">Demanda repetitiva tema 1007 STJ detectada</h5>
     <p class="text-center">Vincular o resultado ?</p>
     <div class="buttons_submit buttons_submit_final">
-        <a href="{% url 'page_sucesso'%}" type="button " class="btn btn-outline-secondary text-dark">Não</a>
-        <a href="{% url 'page_sucesso'%}" type="button " class="btn btn-primary">Sim</a>
+        <a href="{% url 'page_sucesso' file.numero 1 %}" type="button" class="btn btn-outline-secondary text-dark">Não</a>
+        <a href="{% url 'page_sucesso' file.numero 0 %}" type="button " class="btn btn-primary">Sim</a>
     </div>
     {%else%}
-    <h5 class="text-center text-lawyer">Demanda repetitiva não encontrada</h5>
+    <h5 class="text-center text-lawyer mt-5">Demanda repetitiva não encontrada</h5>
     <div class="buttons_submit buttons_submit_final">
-        <a href="{% url 'page_two' file.numero %}" type="button" class="btn btn-outline-secondary text-dark">Retornar</a>
-        <a href="{% url 'page_sucesso'%}" type="button " class="btn btn-primary">Prosseguir</a>
+        <a href="{% url 'page_sucesso' file.numero 1 %}" type="button " class="btn btn-primary">Prosseguir</a>
     </div>
     {%endif%}
     <div class="row">

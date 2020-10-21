@@ -7,5 +7,5 @@ urlpatterns = [
     path('Reus/',page_four, name="page_four"),
     path('Documentos',page_five, name="page_five"),
     path('concluido',final_page, name="final_page"),
-    path('sucesso',page_sucesso, name="page_sucesso"),
+    path('sucesso/<str:np>/<int:ap>',page_sucesso, name="page_sucesso"),
 ]

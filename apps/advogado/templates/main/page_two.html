@@ -1,6 +1,7 @@
 {% extends "base.html" %} {% load static%} {% block main %}
 <div id="loader" class="loader hidden">
     <img src="{% static 'img/logo.gif'%}" alt="">
+    <h3 class="load_text">Carregando Arquivo...</h3>
 </div>
 <h3 class="h3">Peticionamento Eletrônico (2 de 5) - Assuntos</h3>
 <div class="container-fluid">
@@ -214,9 +215,6 @@
 
 </div>
 <div class="buttons_submit float-right">
-    <a href="{% url 'page_one' %}" type="button" class="btn btn-secondary btn-sm">Anterior</a>
-    <a href="{% url 'page_three' %}" type="button" class="btn btn-primary btn-sm">Próximo</a>
-    <a href="" type="button" class="btn btn-secondary btn-sm">Cancelar</a>
 </div>
 
 {% endblock %}

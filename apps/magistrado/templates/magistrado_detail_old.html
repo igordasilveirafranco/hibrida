@@ -3,15 +3,12 @@
 <h3 class="h1 text-center">Magistrado</h3>
 <div class="container-fluid container-grid animated fadeIn">
     {%if processo.tema == 0%}
-    <h5 class="h5 pt-5 text-center">Demanda repetitiva tema 1007 STJ detectada</h5>
-    {%if processo.apontamento == 1 %}
-    <p class="h5 pt-5 text-center text-lawyer">Divergência Apontada</p>
-    {%endif%}
+    <h5 class="h5 pt-5 text-center text-lawyer">Demanda repetitiva tema 1007 STJ detectada</h5>
     <div class="container">
         <h5 class="h5 text-center">Vincular o resultado ?</h5>
         <div class="buttons_submit text-center buttons_submit_magistrado">
             <a href="{% url 'mags_neg'%}" type="button" class="btn btn-over btn-secondary">Desvincular</a>
-            <a href="{% url 'magis_success' %}" type="button" class="btn btn-over btn-secondary">Manter	 </a>
+            <a href="{% url 'magis_success' %}" type="button" class="btn btn-over btn-danger btn-lg">Manter	 </a>
         </div>
     </div>
     {% else %}

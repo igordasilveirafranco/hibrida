@@ -50,6 +50,7 @@ def page_two(request,numerop=""):
         ) 
 
         nome = corrigirAcentos(myfile.name)
+        proc.apontamento = 1
         proc.tema = read_pdf_to_txt(proc.arq.url,nome)
         proc.save()
         form.save(commit=False)
@@ -83,7 +84,12 @@ def move_arquivo(nome):
     arquivo = os.listdir("media/")
     shutil.move("media/"+arquivo[0],"static/pdf/"+arquivo[0])
    
-def page_sucesso(request):
+def page_sucesso(request,np,ap):
+    print(np)
+    print(ap)
+    processo = Processo.objects.get(numero=np)
+    processo.apontamento = ap
+    processo.save()
     template = 'main/page_sucesso.html'
     context = {}
     

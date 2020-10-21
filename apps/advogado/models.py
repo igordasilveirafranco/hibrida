@@ -6,6 +6,7 @@ class Processo(models.Model):
     numero = models.CharField(max_length=20)
     arq = models.FileField(upload_to="pdf/")
     tema = models.IntegerField(blank=True, null=True)
+    apontamento = models.IntegerField(blank=True, null=True)
     class Meta:
         ordering = ('numero',)
 
