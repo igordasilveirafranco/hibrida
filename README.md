@@ -83,4 +83,4 @@ Magistrado/servidor do Judiciário
 Na área restrita ao magistrado e/ou servidor poderá ser avaliado cada processo ajuizado e verificar quais são as demandas repetitivas e em seguida realizar o parecer/decisão do magistrado. Nesta parte, se houver uma divergência entre a IA e o advogado haverá uma sinalização na tela com a frase "divergência Apontada".
 
 ## Youtube
-[![image](https://user-images.githubusercontent.com/25744353/96781107-56c16f00-13c3-11eb-87b3-a510e00d8fab.png)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE "Pitch Híbrida. 21/10/20")
+[![image](https://user-images.githubusercontent.com/25744353/96781107-56c16f00-13c3-11eb-87b3-a510e00d8fab.png)](https://youtu.be/-APaK6O6eHs "Pitch Híbrida. 21/10/20")
