@@ -7,6 +7,8 @@
 
 É um projeto que tem por objetivo assegurar a redução no lapso temporal da tramitação dos processos, concretizando os princípios da eficiência e eficácia administrativa, celeridade processual e acesso à justiça. Garante o incremento da agilidade, associando possíveis códigos de assunto locais dos Tribunais com os códigos de assuntos do Conselho Nacional de Justiça - CNJ.
 
+O presente projeto visa atender as demandas propostas pelo desafio 1 TEMPO E PRODUTIVIDADE do edital CNJ INOVA fase 1.
+
 
 ## Começando .
 
@@ -45,6 +47,7 @@ Para executar o projeto via web basta utilizar o link: http://191.235.110.9:8000
 ### Processo de instalação em um computador local
 
 shell
+
 ```
 cd "diretorio de sua preferencia"
 git clone https://github.com/andersonsimplicio/hibrida.git
@@ -59,11 +62,11 @@ user@computador:diretorio_projeto/ python3.7 manager.py runserver
 O comando irá baixar todas as dependências do projeto e criar um diretório target com os artefatos construídos.
 
 # Instalando Dependência
+
 ```
 $ pip3 install -r requirements.txt
 ```
-OBS: Algumas bibliotecas terão dependência específica de acordo com o sistema operacional utilizado. O sistema Híbrida foi projetado
-para servidores debian/ubuntu.
+OBS: Algumas bibliotecas terão dependência específica de acordo com o sistema operacional utilizado. O sistema Híbrida foi projetado para servidores debian/ubuntu.
 
 ## Configuração
 
@@ -71,4 +74,4 @@ Para o ótimo desempenho do projeto é imprescindível que os aquivos para a cla
 
 ## Ambiente
 
-Após a inserção do arquivo pdf e/ou txt o Híbrida classificará se a peça se enquadra em um tema repetitivo do 1007 ou não. Caso seja positiva esta afirmação, a máquina sugerirá códigos de assuntos dos Tribunais TRF3 e TRF4 e do CNJ para a correta classificação da peça.
+Após a inserção do arquivo pdf e/ou txt o Híbrida classificará se a peça se enquadra em um tema repetitivo do 1007 ou não. Caso seja positiva esta afirmação, proporcionará ao advogado relatar se está em acordo com a IA ou não, quanto a identificação do tema repetitivo
