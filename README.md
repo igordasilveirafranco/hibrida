@@ -36,6 +36,12 @@ Em resumo:
 
 ![funcionamento](https://user-images.githubusercontent.com/25744353/96758272-f293b080-13ac-11eb-86aa-576d2fef3ae3.jpeg)
 
+
+### Executar na web
+
+Para executar o projeto via web basta utilizar o link: http://191.235.110.9:8000/
+
+
 ### Processo de instalação em um computador local
 
 shell
@@ -46,10 +52,8 @@ git clone https://github.com/andersonsimplicio/hibrida.git
 
 ### Executar
 
-Para executar o projeto via web basta utilizar o link: http://191.235.110.9:8000/
-
-Ou no computador local, após a instalação das depedências descritas no requirements.txt no shell
-user@maqui:diretorio_projeto/ python3.7 manager.py runserver
+No computador local, após a instalação das depedências descritas no requirements.txt no shell
+user@computador:diretorio_projeto/ python3.7 manager.py runserver
 
 
 O comando irá baixar todas as dependências do projeto e criar um diretório target com os artefatos construídos.
